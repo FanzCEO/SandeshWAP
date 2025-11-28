@@ -1,0 +1,20 @@
+# Fanz Devspaces MVP (Replit × Warp)
+
+**What you get**
+- Browser terminal (xterm.js) wired to a server PTY
+- Monaco editor in a split pane
+- Simple file read/write API
+- Ready to run on Replit with one command
+
+## Run (on Replit or locally)
+1. Import this repo or unzip in Replit
+2. Open Shell and run:
+   ```bash
+   npm install && npm run dev
+   ```
+3. The app will start Next.js on port 3000 and the API/PTY on port 3001.
+4. Visit your Replit URL → edit code on the left, run commands on the right.
+
+## Notes
+- This is a minimal MVP with no auth and no multi-project routing.
+- When you graduate to Kubernetes, swap the PTY backend to exec into per-user pods.

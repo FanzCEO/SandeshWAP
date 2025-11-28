@@ -1,0 +1,12 @@
+{
+  "name": "my-ai-bot",
+  "templateId": "openai-chatbot",
+  "templateName": "OpenAI Chatbot",
+  "createdAt": "2025-09-12T07:12:25.219Z",
+  "commands": {
+    "install": "npm install",
+    "dev": "npm run dev",
+    "build": "npm run build",
+    "start": "npm start"
+  }
+}

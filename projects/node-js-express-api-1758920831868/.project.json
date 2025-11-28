@@ -1,0 +1,12 @@
+{
+  "name": "node-js-express-api",
+  "templateId": "nodejs-express",
+  "templateName": "Node.js Express API",
+  "createdAt": "2025-09-26T21:07:11.871Z",
+  "commands": {
+    "install": "npm install",
+    "dev": "npm run dev",
+    "build": "npm run build",
+    "start": "npm start"
+  }
+}

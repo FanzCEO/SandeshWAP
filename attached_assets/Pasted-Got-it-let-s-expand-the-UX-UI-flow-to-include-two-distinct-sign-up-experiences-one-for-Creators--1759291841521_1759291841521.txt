@@ -1,0 +1,57 @@
+Got it — let’s expand the UX/UI flow to include two distinct sign-up experiences: one for Creators (Stars) and one for Fanz (fans). These flows should feel parallel but differentiated, reinforcing the brand’s creator-first ethos while making it effortless for fans to engage.
+
+⸻
+
+⭐ Creator (Star) Sign-Up Flow
+
+Creators are the backbone, so their onboarding should feel premium, empowering, and supportive.
+	1.	Welcome Screen
+	•	Bold CTA: “Claim Your Star Power”
+	•	Quick highlight of benefits: 100% earnings, content ownership, community tools.
+	2.	Account Creation
+	•	Social logins (Google, Apple, Twitter/X).
+	•	Email + password option.
+	3.	Profile Setup
+	•	Display name, stage name, pronouns, avatar/banner upload.
+	•	Niche/tags selection (helps match with the right fanz).
+	4.	Verification & Compliance
+	•	ID verification flow (seamless photo + selfie match).
+	•	Age/consent forms with progress tracker (clear + supportive tone).
+	5.	Monetization Setup
+	•	Link payout method (PayPal, bank, crypto, etc.).
+	•	One-tap preview: “Here’s how much you’ll earn (100% yours).”
+	6.	Creator Dashboard Intro
+	•	Guided tour with tooltips: upload button, live features, fan interaction.
+	•	Micro-celebration animation when they publish their first post.
+
+⸻
+
+👥 Fanz Sign-Up Flow
+
+Fanz should feel welcome, safe, and instantly connected.
+	1.	Welcome Screen
+	•	Tagline like: “Discover. Connect. Support. Your new world of creators awaits.”
+	•	Tease featured creators (blurred previews until sign-up).
+	2.	Account Creation
+	•	Simple: Social logins or email + password.
+	•	Ask for birthday (age verification).
+	3.	Personalization Onboarding
+	•	Quick swiping/liking quiz: choose interests, niches, tags.
+	•	Output: personalized feed ready to go.
+	4.	Payment Setup (Optional, Skippable)
+	•	Light nudge: “Add a card to tip or subscribe instantly.”
+	•	Show security badges + privacy reassurance.
+	5.	Fan Dashboard Intro
+	•	Feed walkthrough: discover creators, follow, interact.
+	•	Highlight quick actions: tip, DM, react, share.
+
+⸻
+
+🔄 Unified UX Principles
+	•	Consistent branding: Both flows should feel FUN-branded but tone-shifted → Stars get bold/empowering vibes, Fanz get playful/discovery-driven vibes.
+	•	Seamless cross-navigation: Single account system → a user could upgrade from Fanz → Creator with just a few clicks.
+	•	Progressive onboarding: Don’t overwhelm. Unlock features as users explore (e.g., unlock fan tiers after first follow, unlock advanced analytics after first 5 posts).
+
+⸻
+
+🔥 Imagine this: the Creator and Fan journeys mirror each other, so the platform always feels like a two-sided ecosystem, ccnot just another paywall site. That’s retention gold.

@@ -1,0 +1,47 @@
+AI FEATURES & WEBSOCKET PERFORMANCE VALIDATION
+Generated: Fri Sep 12 07:48:38 AM UTC 2025
+API Base: http://localhost:5000
+
+RESULTS:
+========
+AI Features Performance Testing
+================================
+Testing AI command dry-run analysis...
+  AI dryrun test 1: 2.611810177s - SUCCESS
+  AI dryrun test 2: 1.836297175s - SUCCESS
+  AI dryrun test 3: 2.064158193s - SUCCESS
+Testing AI providers status...
+  AI providers status: .054936474s
+Testing AI generate endpoint performance...
+  AI generate test: .070788405s
+WebSocket Performance Testing
+============================
+Testing WebSocket connection establishment...
+  WebSocket HTTP test response: 200
+  WebSocket connection attempt time: 0.002478s
+Extended Reliability Test
+========================
+Running extended reliability test (10 minutes)...
+Initial memory:  1920KB
+Extended Test Results:
+Total requests: 1936
+Successful requests: 1936
+Failed requests: 0
+Success rate: 100.00%
+Average response time: .072s
+Min response time: .045483332s
+Max response time: .227252341s
+Requests per second: 3.22
+Initial memory:  1920KB
+Final memory:  1920KB
+Memory change: 0KB
+Final Assessment:
+
+FINAL ASSESSMENT:
+================
+AI Features Performance: EXCELLENT
+WebSocket Performance: GOOD
+Extended Reliability Grade: A
+System Memory Stability: EXCELLENT
+
+ENTERPRISE READINESS: PRODUCTION READY

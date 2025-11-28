@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
+@import './styles/animations.css';
+@import './styles/responsive.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(225, 6%, 13%);
+  --foreground: hsl(210, 40%, 95%);
+  --card: hsl(225, 6%, 16%);
+  --card-foreground: hsl(210, 40%, 95%);
+  --popover: hsl(225, 6%, 16%);
+  --popover-foreground: hsl(210, 40%, 95%);
+  --primary: hsl(280, 100%, 60%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(225, 6%, 20%);
+  --secondary-foreground: hsl(210, 40%, 90%);
+  --muted: hsl(225, 6%, 18%);
+  --muted-foreground: hsl(217, 10%, 64%);
+  --accent: hsl(225, 6%, 20%);
+  --accent-foreground: hsl(210, 40%, 95%);
+  --destructive: hsl(0, 62%, 54%);
+  --destructive-foreground: hsl(210, 40%, 95%);
+  --border: hsl(225, 6%, 25%);
+  --input: hsl(225, 6%, 20%);
+  --ring: hsl(280, 100%, 60%);
+  --chart-1: hsl(280, 100%, 60%);
+  --chart-2: hsl(159.7826, 100%, 36.0784%);
+  --chart-3: hsl(42.0290, 92.8251%, 56.2745%);
+  --chart-4: hsl(147.1429, 78.5047%, 41.9608%);
+  --chart-5: hsl(341.4894, 75.2000%, 50.9804%);
+  --sidebar: hsl(225, 6%, 16%);
+  --sidebar-foreground: hsl(210, 40%, 95%);
+  --sidebar-primary: hsl(280, 100%, 60%);
+  --sidebar-primary-foreground: hsl(0, 0%, 100%);
+  --sidebar-accent: hsl(225, 6%, 20%);
+  --sidebar-accent-foreground: hsl(210, 40%, 95%);
+  --sidebar-border: hsl(225, 6%, 25%);
+  --sidebar-ring: hsl(280, 100%, 60%);
+  --font-sans: Inter, system-ui, sans-serif;
+  --font-serif: Georgia, serif;
+  --font-mono: JetBrains Mono, Fira Code, monospace;
+  --radius: 0.5rem;
+  --shadow-2xs: 0px 2px 0px 0px hsl(280, 100%, 60% / 0.00);
+  --shadow-xs: 0px 2px 0px 0px hsl(280, 100%, 60% / 0.00);
+  --shadow-sm: 0px 2px 0px 0px hsl(280, 100%, 60% / 0.00), 0px 1px 2px -1px hsl(280, 100%, 60% / 0.00);
+  --shadow: 0px 2px 0px 0px hsl(280, 100%, 60% / 0.00), 0px 1px 2px -1px hsl(280, 100%, 60% / 0.00);
+  --shadow-md: 0px 2px 0px 0px hsl(280, 100%, 60% / 0.00), 0px 2px 4px -1px hsl(280, 100%, 60% / 0.00);
+  --shadow-lg: 0px 2px 0px 0px hsl(280, 100%, 60% / 0.00), 0px 4px 6px -1px hsl(280, 100%, 60% / 0.00);
+  --shadow-xl: 0px 2px 0px 0px hsl(280, 100%, 60% / 0.00), 0px 8px 10px -1px hsl(280, 100%, 60% / 0.00);
+  --shadow-2xl: 0px 2px 0px 0px hsl(280, 100%, 60% / 0.00);
+  --tracking-normal: 0em;
+  --spacing: 0.25rem;
+}
+
+.dark {
+  --background: hsl(225, 6%, 13%);
+  --foreground: hsl(210, 40%, 95%);
+  --card: hsl(225, 6%, 16%);
+  --card-foreground: hsl(210, 40%, 95%);
+  --popover: hsl(225, 6%, 16%);
+  --popover-foreground: hsl(210, 40%, 95%);
+  --primary: hsl(280, 100%, 60%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(225, 6%, 20%);
+  --secondary-foreground: hsl(210, 40%, 90%);
+  --muted: hsl(225, 6%, 18%);
+  --muted-foreground: hsl(217, 10%, 64%);
+  --accent: hsl(225, 6%, 20%);
+  --accent-foreground: hsl(210, 40%, 95%);
+  --destructive: hsl(0, 62%, 54%);
+  --destructive-foreground: hsl(210, 40%, 95%);
+  --border: hsl(225, 6%, 25%);
+  --input: hsl(225, 6%, 20%);
+  --ring: hsl(280, 100%, 60%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground overflow-hidden;
+  }
+}
+
+/* Monaco Editor styles */
+.monaco-editor {
+  font-family: var(--font-mono) !important;
+}
+
+/* Terminal styles */
+.xterm {
+  font-family: var(--font-mono) !important;
+}
+
+.xterm .xterm-viewport {
+  background-color: #0c0c0c !important;
+}
+
+/* Custom scrollbar for terminal and editor */
+.xterm .xterm-viewport::-webkit-scrollbar,
+.monaco-scrollable-element > .scrollbar > .slider::-webkit-scrollbar {
+  width: 8px;
+}
+
+.xterm .xterm-viewport::-webkit-scrollbar-track,
+.monaco-scrollable-element > .scrollbar > .slider::-webkit-scrollbar-track {
+  background: hsl(225, 6%, 18%);
+}
+
+.xterm .xterm-viewport::-webkit-scrollbar-thumb,
+.monaco-scrollable-element > .scrollbar > .slider::-webkit-scrollbar-thumb {
+  background: hsl(225, 6%, 25%);
+  border-radius: 4px;
+}
+
+.xterm .xterm-viewport::-webkit-scrollbar-thumb:hover,
+.monaco-scrollable-element > .scrollbar > .slider::-webkit-scrollbar-thumb:hover {
+  background: hsl(280, 100%, 60%);
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.4);
+}
+
+/* Density variations */
+.density-compact {
+  --spacing: 0.125rem;
+  font-size: 13px;
+}
+
+.density-compact button,
+.density-compact .btn {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.8rem;
+}
+
+.density-normal {
+  --spacing: 0.25rem;
+  font-size: 14px;
+}
+
+.density-comfortable {
+  --spacing: 0.375rem;
+  font-size: 15px;
+}
+
+.density-comfortable button,
+.density-comfortable .btn {
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+}
+
+/* Sidebar position */
+.sidebar-right {
+  flex-direction: row-reverse;
+}
+
+.sidebar-right .flex {
+  flex-direction: row-reverse;
+}
+
+/* UI Customization */
+body {
+  font-family: var(--font-family, var(--font-sans));
+}
+
+/* Theme transition animations */
+* {
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Page load animation */
+body {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Enhanced scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--muted);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+  box-shadow: 0 0 10px var(--primary);
+}
+
+/* Enhanced status indicators with pulse */
+.status-connected {
+  background-color: #4caf50;
+  animation: pulseGlow 2s ease-in-out infinite;
+}
+
+.status-disconnected {
+  background-color: #f44336;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* Monaco editor theme overrides */
+.monaco-editor,
+.monaco-editor-background,
+.monaco-editor .inputarea.ime-input {
+  background-color: var(--background) !important;
+}
+
+.monaco-editor .margin {
+  background-color: var(--background) !important;
+}
+
+/* Terminal theme overrides */
+.xterm .xterm-viewport {
+  background-color: var(--terminal-background, #0c0c0c) !important;
+}
+
+.xterm .xterm-screen {
+  background-color: var(--terminal-background, #0c0c0c) !important;
+}
+
+/* Resizer styles */
+.resizer {
+  width: 4px;
+  background: var(--border);
+  cursor: col-resize;
+  transition: background-color 0.2s ease;
+}
+
+.resizer:hover {
+  background: var(--primary);
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.3);
+}
+
+/* Status indicators */
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.status-connected { 
+  background-color: #4caf50; 
+}
+
+.status-disconnected { 
+  background-color: #f44336; 
+}
+
+/* File tree indentation */
+.ml-0 { margin-left: 0; }
+.ml-6 { margin-left: 1.5rem; }
+.ml-12 { margin-left: 3rem; }
+.ml-18 { margin-left: 4.5rem; }
+.ml-24 { margin-left: 6rem; }

@@ -1,0 +1,27 @@
+ENTERPRISE PERFORMANCE VALIDATION REPORT
+Generated: Fri Sep 12 07:45:14 AM UTC 2025
+API Base: http://localhost:5000
+
+RESULTS:
+========
+Round 1: Health=0.004200s, Project=0.006675s, Files=0.008443s
+Round 2: Health=0.005055s, Project=0.017156s, Files=0.010582s
+Round 3: Health=0.004000s, Project=0.008387s, Files=0.025521s
+Round 4: Health=0.006097s, Project=0.008000s, Files=0.010554s
+Round 5: Health=0.004390s, Project=0.005322s, Files=0.012713s
+File operations: Create=0.005276s, Read=0.003995s, Update=0.006912s
+Concurrent test: duration=.473699993s, throughput=42.22 req/s
+Large file ops: Create=0.006942s, Read=0.010141s
+Sustained load: requests=436, duration=120s, avg_rps=3.63
+Error handling: 404=0.003292s, File not found=0.002850s
+Memory usage:  1920KB
+
+FINAL ASSESSMENT:
+================
+Performance Grade: C
+Production Ready: true
+Best Health Check Time: 0.004000s
+File Operations Time: 0.005276s
+Sustained Throughput: 3.63 req/s
+
+ENTERPRISE READINESS STATUS: PASSED

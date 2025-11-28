@@ -1,0 +1,30 @@
+name: ci
+on: [push, pull_request]
+jobs:
+  test-lint-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.11' }
+      - run: pip install uv
+      - run: uv pip install .[dev] --system
+      - run: ruff check .
+      - run: black --check .
+      - run: mypy app
+      - run: pytest -q
+
+      - name: Build image
+        uses: docker/build-push-action@v6
+        with:
+          context: ./projects/proj_fastapi
+          file: ./projects/proj_fastapi/Dockerfile
+          push: false
+          tags: fanz/fastapi:ci
+
+      - name: Vulnerability scan
+        uses: aquasecurity/trivy-action@0.24.0
+        with:
+          image-ref: fanz/fastapi:ci
+          format: 'table'
+          exit-code: '0'

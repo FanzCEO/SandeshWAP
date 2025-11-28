@@ -1,0 +1,12 @@
+{
+  "name": "test-nextjs-cache",
+  "templateId": "nextjs-app",
+  "templateName": "Next.js Application",
+  "createdAt": "2025-09-12T07:13:39.210Z",
+  "commands": {
+    "install": "npm install",
+    "dev": "npm run dev",
+    "build": "npm run build",
+    "start": "npm start"
+  }
+}

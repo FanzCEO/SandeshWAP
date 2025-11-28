@@ -1,0 +1,1 @@
+const express=require('express');const app=express();app.get('/',(_,r)=>r.send('Hello from Node Basic'));app.listen(3000,()=>console.log('Node Basic on 3000'));

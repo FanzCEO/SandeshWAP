@@ -1,0 +1,8 @@
+PERFORMANCE VALIDATION REPORT
+Generated: Fri Sep 12 07:44:14 AM UTC 2025
+API Base: http://localhost:5000
+
+==================================================
+PHASE 1: BASIC ENDPOINT PERFORMANCE
+================================================
+Testing: health_check

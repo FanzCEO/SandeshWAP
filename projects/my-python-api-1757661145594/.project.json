@@ -1,0 +1,12 @@
+{
+  "name": "my-python-api",
+  "templateId": "fastapi-python",
+  "templateName": "FastAPI Python",
+  "createdAt": "2025-09-12T07:12:25.604Z",
+  "commands": {
+    "install": "pip install -r requirements.txt",
+    "dev": "python main.py",
+    "build": "",
+    "start": "uvicorn main:app --host 0.0.0.0 --port 8000"
+  }
+}

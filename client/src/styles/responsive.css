@@ -1,0 +1,324 @@
+/* Sandesh WAP Responsive Design */
+
+/* ==============================
+   MOBILE BREAKPOINTS
+   ============================== */
+
+/* Small phones */
+@media (max-width: 480px) {
+  /* Adjust header for mobile */
+  header {
+    padding: 0.5rem;
+  }
+
+  header h1 {
+    font-size: 1rem;
+  }
+
+  header nav {
+    display: none;
+  }
+
+  /* Stack layout vertically on mobile */
+  .flex-col-mobile {
+    flex-direction: column;
+  }
+
+  /* Hide file explorer on mobile by default */
+  .file-explorer {
+    position: fixed;
+    left: -100%;
+    transition: left 0.3s ease;
+    z-index: 40;
+    height: 100vh;
+  }
+
+  .file-explorer.mobile-open {
+    left: 0;
+  }
+
+  /* Adjust editor tabs for mobile */
+  .editor-tabs {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Terminal takes full height on mobile */
+  .terminal-mobile {
+    height: 40vh;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 30;
+  }
+
+  /* Adjust buttons for touch */
+  button {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Welcome screen adjustments */
+  .welcome-screen {
+    padding: 1rem;
+  }
+
+  .welcome-screen h1 {
+    font-size: 1.5rem;
+  }
+
+  /* Dialog adjustments */
+  .dialog-content {
+    width: 95%;
+    margin: 1rem;
+  }
+}
+
+/* Tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+  /* Adjust sidebar width */
+  .file-explorer {
+    width: 200px;
+  }
+
+  /* Adjust header spacing */
+  header {
+    padding: 0.75rem 1rem;
+  }
+
+  /* Show abbreviated nav */
+  header nav button span {
+    display: none;
+  }
+
+  /* Terminal height adjustment */
+  .terminal-tablet {
+    height: 35vh;
+  }
+}
+
+/* Small laptops */
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Maintain most desktop features */
+  .file-explorer {
+    width: 220px;
+  }
+}
+
+/* ==============================
+   TOUCH OPTIMIZATIONS
+   ============================== */
+
+@media (pointer: coarse) {
+  /* Increase touch targets */
+  button, a, .clickable {
+    min-height: 44px;
+    padding: 0.75rem;
+  }
+
+  /* Add touch feedback */
+  button:active, a:active, .clickable:active {
+    transform: scale(0.98);
+    opacity: 0.9;
+  }
+
+  /* Improve scrolling */
+  * {
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+  }
+
+  /* Disable hover effects on touch */
+  .hover-lift:hover,
+  .hover-scale:hover,
+  .hover-glow:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  /* Add touch ripple effect */
+  .ripple {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .ripple::before {
+    content: '';
+    position: absolute;
+    top: var(--y);
+    left: var(--x);
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+  }
+
+  .ripple:active::before {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+/* ==============================
+   ORIENTATION SUPPORT
+   ============================== */
+
+@media (orientation: landscape) and (max-height: 500px) {
+  /* Reduce vertical spacing in landscape */
+  header {
+    padding: 0.25rem 0.5rem;
+  }
+
+  .terminal-landscape {
+    height: 30vh;
+  }
+
+  /* Hide less important elements */
+  .status-bar {
+    display: none;
+  }
+}
+
+/* ==============================
+   HIGH DPI DISPLAYS
+   ============================== */
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* Sharper borders and shadows */
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Enhance gradients */
+  .animated-gradient-bg {
+    background: linear-gradient(-45deg, #9333ea, #ec4899, #3b82f6, #10b981);
+    background-size: 200% 200%;
+  }
+}
+
+/* ==============================
+   DARK MODE OPTIMIZATIONS
+   ============================== */
+
+@media (prefers-color-scheme: dark) {
+  /* Additional dark mode optimizations */
+  .glass-card {
+    background: rgba(0, 0, 0, 0.4);
+  }
+
+  .skeleton-dark {
+    background: linear-gradient(90deg, #1a1a1a 25%, #2a2a2a 50%, #1a1a1a 75%);
+  }
+}
+
+/* ==============================
+   REDUCED MOTION
+   ============================== */
+
+@media (prefers-reduced-motion: reduce) {
+  /* Disable animations for accessibility */
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  /* Remove parallax effects */
+  .parallax {
+    transform: none !important;
+  }
+
+  /* Simplify hover states */
+  .hover-lift:hover,
+  .hover-scale:hover {
+    transform: none !important;
+  }
+}
+
+/* ==============================
+   PRINT STYLES
+   ============================== */
+
+@media print {
+  /* Hide unnecessary elements */
+  header,
+  .file-explorer,
+  .terminal,
+  .status-bar,
+  button,
+  .dialog {
+    display: none !important;
+  }
+
+  /* Optimize for printing */
+  body {
+    background: white;
+    color: black;
+  }
+
+  .editor-content {
+    font-size: 10pt;
+    line-height: 1.5;
+  }
+
+  /* Remove backgrounds and shadows */
+  * {
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+}
+
+/* ==============================
+   UTILITY CLASSES
+   ============================== */
+
+/* Mobile-only display */
+@media (max-width: 768px) {
+  .mobile-only {
+    display: block !important;
+  }
+  
+  .desktop-only {
+    display: none !important;
+  }
+}
+
+/* Desktop-only display */
+@media (min-width: 769px) {
+  .mobile-only {
+    display: none !important;
+  }
+  
+  .desktop-only {
+    display: block !important;
+  }
+}
+
+/* Responsive text */
+.text-responsive {
+  font-size: clamp(0.875rem, 2vw, 1rem);
+}
+
+.heading-responsive {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+/* Responsive spacing */
+.spacing-responsive {
+  padding: clamp(0.5rem, 2vw, 1.5rem);
+  margin: clamp(0.5rem, 2vw, 1.5rem);
+}
+
+/* Container queries (future-proof) */
+@container (max-width: 400px) {
+  .container-responsive {
+    flex-direction: column;
+  }
+}
